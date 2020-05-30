@@ -32,9 +32,12 @@ test_set = test_datagen.flow_from_directory(
 model.fit(
         training_set,
         steps_per_epoch=8000,
-        epochs=5,
+        epochs=1,
         validation_data=test_set,
         validation_steps=800)
 
 model.save('/Model/cat_and_dog.h5')
+file = open("text.txt", "w") 
+file.write(str(model_old(test_set, verbose = False)[1])) 
+file.close()
 
