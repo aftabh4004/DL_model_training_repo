@@ -38,6 +38,6 @@ model.fit(
 
 model.save('/Model/cat_and_dog.h5')
 file = open("text.txt", "w") 
-file.write(str(model_old(test_set, verbose = False)[1])) 
+file.write(str(model(test_set, verbose = False)[1])) 
 file.close()
 
